@@ -86,4 +86,3 @@ RUN nvim --headless +PlugInstall +qall || true
 WORKDIR /workspace
 
 CMD ["zsh"]
-CMD ["tmux"]
