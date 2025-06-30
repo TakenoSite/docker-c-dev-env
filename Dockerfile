@@ -26,7 +26,9 @@ RUN apt-get update && apt-get install -y \
     clangd \
     fonts-noto-cjk \
     fonts-ipafont \
-    fonts-unfonts-core
+    fonts-unfonts-core \
+	nmap \
+	net-tools
 
 # ロケール設定
 RUN locale-gen en_US.UTF-8
