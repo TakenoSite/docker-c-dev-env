@@ -13,8 +13,7 @@ syntax on
 
 " Cファイル用のインデント処理
 filetype plugin indent on
-"colorscheme desert
-colorscheme industry
+colorscheme vim
 
 " プラグイン読み込み
 call plug#begin('~/.vim/plugged')
