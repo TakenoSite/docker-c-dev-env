@@ -93,6 +93,11 @@ RUN nvim --headless +PlugInstall +qall || true
 
 WORKDIR /workspace
 
-#任意linuxコマンドを実行する
+# 任意コマンドを設定する
+RUN echo "alias cls='clear'" >> /root/.zshrc
+RUN echo "service ssh start" >> /root/.zshrc
+RUN echo "tmux" >> /root/.zshrc
+RUN echo "clear" >> /root/.zshrc
+
+# zshを実行
 CMD ["zsh"]
-# CMD ["alias cls='clea'"]
