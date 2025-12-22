@@ -29,7 +29,9 @@ RUN apt-get update && apt-get install -y \
     fonts-unfonts-core \
 	nmap \
 	net-tools \
-	apache2
+	apache2 \ 
+	libssl-dev \
+	htop
 
 RUN apt install -y openssh-server \
  && mkdir /var/run/sshd \
