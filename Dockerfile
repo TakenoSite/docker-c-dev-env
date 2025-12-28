@@ -92,6 +92,7 @@ COPY tmux/tmux.conf /root/.tmux.conf
 
 # nvim 設定ファイルをコピー（要準備、下記参照）
 COPY nvim/init.vim /root/.config/nvim/init.vim
+COPY nvim/coc-settings.json /root/.config/nvim/coc-settings.json
 
 # Neovimのプラグインをインストール（coc.nvimなど）
 RUN nvim --headless +PlugInstall +qall || true

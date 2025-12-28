@@ -1,0 +1,12 @@
+{
+  "clangd.arguments": [
+    "--background-index",
+    "--function-arg-placeholders=false",
+    "--completion-style=detailed"
+  ],
+  "suggest.snippetIndicator": "",
+  "suggest.noselect": true,
+  "coc.preferences.formatOnType": false,
+  "snippets.enable": false,
+  "signature.enable": false
+}
