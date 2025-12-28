@@ -36,13 +36,19 @@ call plug#end()
 " coc.nvim用拡張
 let g:coc_global_extensions = ['coc-clangd']
 
-" Enterで文字補完する。
-inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm() : "\<CR>"
+" Enterで文字補完する。スニペット展開なし
+inoremap <silent><expr> <CR> 
+  \ pumvisible() ? coc#_select_confirm() : 
+  \ "\<CR>"
 
 " 補完候補が表示されているときに矢印キーで移動
 inoremap <expr> <Up>    coc#pum#visible() ? coc#pum#prev(1) : "\<Up>"
 inoremap <expr> <Down>  coc#pum#visible() ? coc#pum#next(1) : "\<Down>"
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" スニペット展開を完全に無効化
+let g:coc_snippet_next = ''
+let g:coc_snippet_prev = ''
+inoremap <silent> <C-u> <Nop>
 
 noremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>

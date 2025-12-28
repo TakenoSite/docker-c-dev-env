@@ -1,7 +1,8 @@
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV LANG C.UTF-8
+ENV LANG=C.UTF-8
+ENV TERM=xterm-256color
 
 # 基本ツール＆開発ツールのインストール
 RUN apt-get update && apt-get install -y \
@@ -27,11 +28,13 @@ RUN apt-get update && apt-get install -y \
     fonts-noto-cjk \
     fonts-ipafont \
     fonts-unfonts-core \
-	nmap \
-	net-tools \
-	apache2 \ 
-	libssl-dev \
-	htop
+    nmap \
+    net-tools \
+    apache2 \
+    libssl-dev \
+    htop \
+    xsel \
+    xclip
 
 RUN apt install -y openssh-server \
  && mkdir /var/run/sshd \
