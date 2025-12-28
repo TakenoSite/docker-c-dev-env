@@ -157,6 +157,3 @@ exit
 - `zsh/.zshrc`: Zshエイリアス・関数など
 - `nvim/init.vim`: Neovimプラグイン・キーマッピング
 - `Dockerfile`: インストール対象を追加削除
-
-## ライセンス
-このセットアップは Ubuntu, Neovim, Oh-my-zsh など各プロジェクトのライセンスに従います。
